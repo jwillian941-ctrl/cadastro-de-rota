@@ -57,7 +57,7 @@ thead tr th {{
 # =========================
 # CARREGAR PLANILHA
 # =========================
-arquivo = r"C:\Users\junio\Desktop\Aula de Python\PainelCorporativo\laucher\Planilha de cadastro de prazos por rota.xlsx"
+arquivo = "Planilha de cadastro de prazos por rota.xlsx"
 df = pd.read_excel(arquivo, sheet_name="Planilha1")
 df.columns = df.columns.str.strip()
 df = df.dropna(axis=1, how='all')
@@ -112,4 +112,5 @@ st.markdown("---")
 # =========================
 # TABELA
 # =========================
+
 st.dataframe(df_filtrado, use_container_width=True)
